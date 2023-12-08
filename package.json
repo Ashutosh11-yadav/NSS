@@ -17,6 +17,8 @@
     "formik": "^2.4.5",
     "react": "18.2.0",
     "react-native": "0.72.6",
+    "react-native-ratings": "^8.1.0",
+    "react-native-responsive-screen": "^1.4.2",
     "react-native-animatable": "^1.4.0",
     "react-native-check-box": "^2.1.7",
     "react-native-paper": "^5.11.3",
