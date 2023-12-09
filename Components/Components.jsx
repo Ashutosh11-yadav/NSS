@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity , View, Text} from "react-native";
 import { StyleSheet } from "react-native";
-import { Appcolor } from "../Screens/utils/AppColors";
+import { Appcolor } from "../screens/utils/AppColors";
 
 const Components = ({buttonTitle, onPress}) =>{
     return(
@@ -31,6 +31,5 @@ const styles= StyleSheet.create({
     },
     btnContainer:{
         alignItems:'center',
-        
     }
 })
