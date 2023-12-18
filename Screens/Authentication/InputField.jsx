@@ -1,8 +1,10 @@
 import { View, Text , TextInput} from 'react-native'
 import React from 'react'
 import { StyleSheet } from 'react-native'
+import { Appcolor } from "../utils/AppColors";
 
 const InputField = ({
+    Info,
     placeholder,
     onBlur,
     onChangeText,
@@ -15,6 +17,7 @@ const InputField = ({
 }) => {
   return (
     <View>
+    <Text style={styles.info}>{Info}</Text>
     <View style={styles.inputContainer}>
     <TextInput
     placeholder={placeholder}
@@ -39,15 +42,21 @@ export default InputField
 const styles= StyleSheet.create({
     inputContainer:{
         height:40,
-        marginBottom:30,
+        marginBottom:22,
         alignItems:'center'
+    },
+    info:{
+        marginHorizontal:16,
+        marginBottom:4,
+        fontSize:15,
+        color:Appcolor.NSS
     },
     textEntry:{
         borderColor:'black',
         borderRadius:10,
         
         height:50,
-        width:350,
+        width:330,
         paddingHorizontal:10,
         marginHorizontal:10,
         backgroundColor:'#D9D9D9'

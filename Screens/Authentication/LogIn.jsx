@@ -5,23 +5,27 @@ import { Appcolor } from "../utils/AppColors";
 import { loginInitialValue, loginValidationSchema } from "./utils";
 import InputField from "./InputField";
 import Components from "../../Components/Components"
+import { useNavigation } from "@react-navigation/native";
 
+const logo=require("../../assets/logo.png")
 const LogIn = () => {
+
+    const navigation= useNavigation();
 
     const handleLogin = () => {
         console.log("Hello")
     }
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.logoBox}>
-                <Image style={styles.logo} source={require('../../assets/logo.png')} />
+                <Image style={styles.logo} source={logo}/>
             </View>
             
+                <View style={{ flex: 0.75 , backgroundColor:"#ffffff", borderTopEndRadius:100}}>
                 <View style={styles.Heading}>
                     <Text style={styles.HeadingText}>Login</Text>
                 </View>
-                <View style={{ flex: 0.6 }}>
                     <Formik
                         initialValues={loginInitialValue}
                         validationSchema={loginValidationSchema}
@@ -57,14 +61,14 @@ const LogIn = () => {
                                         errors={errors.password}
                                     />
 
-                                    <View style={{ alignItems: 'flex-end', marginHorizontal: 35, }}>
+                                    <View style={{ alignItems: 'flex-end', marginHorizontal: 40, marginTop:5 }}>
                                         <TouchableOpacity>
                                         <Text>Forgot Password?</Text>
                                         </TouchableOpacity>
                                     </View>
                                     <Components buttonTitle={'LogIn'} onPress={handleSubmit} />
-                                    <TouchableOpacity style={{ alignItems: 'center' }}>
-                                        <Text style={{ fontSize: 20, }}>New User?<Text style={{textDecorationLine:'underline'}}> Sign Up</Text></Text>
+                                    <TouchableOpacity style={{ alignItems: 'center',margin:20 }} onPress={() =>navigation.navigate('SignUp')}>
+                                        <Text style={{ fontSize: 16, }}>New User?<Text style={{textDecorationLine:'underline'}}> Sign Up</Text></Text>
                                     </TouchableOpacity>
 
                                 </View>
@@ -73,7 +77,7 @@ const LogIn = () => {
                     </Formik>
               
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -82,19 +86,20 @@ export default LogIn
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: Appcolor.NSS,
+
 
     },
     logoBox: {
-        flex: 0.4,
-        backgroundColor: Appcolor.NSS,
+        flex:0.3,
         alignItems: 'center',
         justifyContent: "center",
         borderBottomLeftRadius:100,
         borderBottomRightRadius:100
     },
     logo: {
-        height: '50%',
-        width: '40%',
+        height:'60%',
+        width:'40%'
     },
     Heading: {
         alignItems: 'center',

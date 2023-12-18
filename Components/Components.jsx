@@ -26,7 +26,7 @@ const styles= StyleSheet.create({
         width:250,
         color:'#ffffff',
         textAlign:'center',
-        margin:40,
+        margin:20,
         paddingVertical:10
     },
     btnContainer:{
