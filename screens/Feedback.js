@@ -46,7 +46,8 @@ export default function Feedback({navigation}) {
 
 const styles=StyleSheet.create({
     container:{
-        padding:14
+        paddingHorizontal:14,
+        backgroundColor:"white"
     },
     title:{
         fontSize:wp(6.1),

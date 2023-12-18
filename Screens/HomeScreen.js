@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View,Image,TouchableOpacity } from 'rea
 // import DrawerNavigation from '../Navigation/DrawerNavigation';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import { heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import EventCard from './components/EventCard';
 
 const HomeScreen = ({navigation}) => {
     return(
@@ -10,6 +11,7 @@ const HomeScreen = ({navigation}) => {
             <TouchableOpacity onPress={()=>navigation.toggleDrawer()}>
             <Image source={require('../assets/logo.png')} style={styles.menuBtn}/>
             </TouchableOpacity>
+            <EventCard/>
         </View>
     )
 }
