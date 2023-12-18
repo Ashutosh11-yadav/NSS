@@ -1,32 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import TabScreen from './TabScreen';
-import LogIn from './Screens/Authentication/LogIn';
+import 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import SignUp from './Screens/Authentication/SignUp'
-import StackNavigation from './Components/navigator/StackNavigation';
-
-
-
+import Navigation from './Navigation/Navigation'
 
 export default function App() {
   return (
   
-      <View style={{flex:1}}>
-        
-      <StackNavigation/>
-
-      </View>
-        
+      <SafeAreaView style={{flex:1}}>
+        <Navigation/>
+      </SafeAreaView>
+     
     
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
