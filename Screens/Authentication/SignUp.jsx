@@ -3,10 +3,10 @@ import { Text, View, Image, ScrollView } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { StyleSheet } from "react-native";
-import { Appcolor } from "../utils/AppColors";
-import InputField from "./InputField";
+import { Appcolor } from "../../utils/AppColors";
+import InputField from "../InputField";
 import { Formik } from "formik";
-import { SignUpInitialValue, SignUpValidationSchema } from "./utils";
+import { SignUpInitialValue, SignUpValidationSchema } from "../utils";
 import DropDownPicker from "react-native-dropdown-picker";
 import { PickerSelectProps } from "react-native-picker-select";
 import { useState } from "react";
